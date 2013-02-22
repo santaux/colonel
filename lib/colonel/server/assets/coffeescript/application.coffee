@@ -9,10 +9,12 @@ $ ->
 
   $('#crontab-form a.select_all').on('click', ->
     $(this).parents(".box").find('select option').attr('selected', 'selected')
+    return false;
   )
 
   $('#crontab-form a.clear_all').on('click', ->
     $(this).parents(".box").find('select').val(null)
+    return false;
   )
 
   $('form#crontab-form').submit( ->
@@ -49,8 +51,14 @@ $ ->
 
   post_to_url = (path, method) ->
     form = document.createElement("form")
-    form.setAttribute("method", method)
+    form.setAttribute("method", 'POST')
     form.setAttribute("action", path)
 
+    input = document.createElement("input")
+    input.setAttribute("type", 'hidden')
+    input.setAttribute("name", '_method')
+    input.setAttribute("value", method)
+
     document.body.appendChild(form)
+    form.appendChild(input)
     form.submit()

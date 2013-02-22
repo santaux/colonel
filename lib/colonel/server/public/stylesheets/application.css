@@ -1,0 +1,18 @@
+a {
+ font-size: 18px;
+}
+
+.box select {
+    height: 150px !important;
+    width: 150px;
+}
+
+.box {
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+}
+
+a.select_all, a.clear_all {
+    font-size: 15px;
+}

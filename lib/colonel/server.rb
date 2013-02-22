@@ -13,7 +13,7 @@ require 'colonel/server/helpers/roots_helper'
 require 'colonel/server/helpers/templates_helper'
 require 'colonel/server/helpers/views_helper'
 
-class Server < Sinatra::Base
+#class Server < Sinatra::Base
 
   use CoffeeEngine
   use Rack::MethodOverride
@@ -70,6 +70,6 @@ class Server < Sinatra::Base
 
     redirect '/'
   end
-end
+#end
 
-Server.run!
+#Server.run!

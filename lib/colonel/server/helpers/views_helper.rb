@@ -11,7 +11,7 @@ module ViewsHelper
       })
     }
     capture_haml do
-      haml_tag :form, {action: opts[:url], id: opts[:html][:id], method: method}, &form_block
+      haml_tag :form, {action: opts[:url], method: method}.merge(opts[:html]), &form_block
     end
   end
 

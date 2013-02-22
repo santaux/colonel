@@ -44,4 +44,8 @@ module TemplatesHelper
     template = template_cmds.select { |cmd| cmd[:value] == command }.first
     template ? template[:name] : command
   end
+
+  def selected?(period, i)
+    @job && @job.schedule.send(period).include?(i.to_s) && "selected"
+  end
 end
