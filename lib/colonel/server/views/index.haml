@@ -1,0 +1,29 @@
+%h2 Cron Jobs
+%br/
+%table.table.table-bordered.table-striped.table-condensed.cron
+  %thead
+    %tr
+      %th №
+      %th Minutes
+      %th Hours
+      %th Days
+      %th Months
+      %th Weekdays
+      %th Command
+      %th Action
+  %tbody
+    - @jobs.each do |job|
+      %tr
+        %td= job.id
+        %td= job.schedule.minutes_string
+        %td= job.schedule.hours_string
+        %td= job.schedule.days_string
+        %td= job.schedule.months_string
+        %td= job.schedule.weekdays_string
+        %td= command_with_templates job.command.get
+        %td
+          = link_to "Edit", edit_path(job.id)
+          |
+          \#{link_to "Delete", delete_path(job.id), :method => :delete, :confirm => "Are you sure to delete this job?"}
+%br/
+= link_to "Add new job", new_path, :id => 'new_cron_job_button'
