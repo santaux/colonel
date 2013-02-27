@@ -1,4 +1,6 @@
 module TemplatesHelper
+  # NOTICE: These templates will be removed here in the future.
+  #         (There will be import/export from .yml config or from sqlite database)
   def template_cmds
     [
       {
