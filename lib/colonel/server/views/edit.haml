@@ -1,4 +1,7 @@
 = form_for :cron, :url => update_path(@job.id), :method => :put, :html => {:id => "crontab-form"} do |f|
   = haml :form
+  %input.btn{:type => "submit", :value => "Update"}/
+  %br/
+  %br/
   = haml :templates
 

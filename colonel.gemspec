@@ -16,4 +16,9 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_dependency "vegas", "~> 0.1.2"
+  gem.add_dependency "sinatra", ">= 0.9.2"
+  gem.add_dependency "haml"
+  gem.add_dependency "coffee-script"
 end

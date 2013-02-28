@@ -1,4 +1,7 @@
 = form_for :job, :url => create_path, :method => :post, :html => {:id => "crontab-form", :class => "form-inline"} do |f|
   = haml :form
+  %input.btn{:type => "submit", :value => "Create"}/
+  %br/
+  %br/
   = haml :templates
 
