@@ -21,4 +21,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency "sinatra", ">= 0.9.2"
   gem.add_dependency "haml"
   gem.add_dependency "coffee-script"
+  gem.add_development_dependency "redcarpet", "~> 1.17"
+  gem.add_development_dependency "yard", "~> 0.7.5"
 end
