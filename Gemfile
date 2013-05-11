@@ -14,3 +14,6 @@ gem 'sinatra-authorization'
 #front-end
 gem 'haml'
 gem 'coffee-script'
+
+# Specify your gem's dependencies in rand.gemspec
+gemspec
