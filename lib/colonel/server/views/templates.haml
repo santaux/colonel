@@ -2,3 +2,7 @@
 %select#command_template
   - template_cmds.each do |cmd|
     %option{value: "#{cmd[:value]}"}= cmd[:name]
+
+-# TODO: Where it will save templates?
+-# Tmp? Custom dir? If custom dir - I need to add new text field with path to save the template
+-# Which format to use? I guess .yml or .csv or xml (or just simple text file)
