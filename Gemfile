@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'actionpack'
@@ -6,6 +6,7 @@ gem 'shotgun'
 gem 'thin'
 gem 'sqlite3'
 gem 'vegas'
+gem 'rake'
 
 # sinatra extensions
 gem 'sinatra-authorization'
