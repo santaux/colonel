@@ -1,7 +1,6 @@
-= form_for :job, :url => create_path, :method => :post, :html => {:id => "crontab-form", :class => "form-inline"} do |f|
+= form_for :job, :url => create_path, :method => :post, :html => {:id => "crontab-form"} do |f|
   = haml :form
   %input.btn{:type => "submit", :value => "Create"}/
+  %a.btn{:href => '/'} Back
   %br/
   %br/
-  = haml :templates
-

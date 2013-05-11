@@ -16,3 +16,7 @@ a {
 a.select_all, a.clear_all {
     font-size: 15px;
 }
+
+input#command {
+  margin-bottom: 0px;
+}

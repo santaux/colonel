@@ -1,9 +1,8 @@
 Colonel
 =======
 
-Gem for cron jobs editing by web GUI. It is not finished.
-Please, try to check the state of this project later.
-But if you want use it right now anyway you need to read lines below.
+Gem for cron jobs editing by web GUI. Web GUI is based on Sinatra, Vegas
+and Twitter Bootstrap.
 
 ## Usage
 
@@ -29,3 +28,8 @@ Or use it directly through your irb/rails console:
     builder = Colonel::Builder.new
     jobs = builder.parse
 
+## Screenshots
+![Jobs list](https://github.com/santaux/colonel/raw/master/screenshots/jobs_list.png "jobs list")
+![Job editing](https://github.com/santaux/colonel/raw/master/screenshots/job_editing.png "job editing")
+![Job deleting](https://github.com/santaux/colonel/raw/master/screenshots/job_deleting.png "job deleting")
+![New job validating](https://github.com/santaux/colonel/raw/master/screenshots/new_job_validating.png "new job validating")
