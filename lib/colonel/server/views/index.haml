@@ -20,7 +20,7 @@
         %td= job.schedule.days_string
         %td= job.schedule.months_string
         %td= job.schedule.weekdays_string
-        %td= command_with_templates job.command.get
+        %td= job.command.get.slice(0,47) + "..."
         %td
           = link_to "Edit", edit_path(job.id)
           |

@@ -10,7 +10,6 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'colonel'
 require 'colonel/server/coffee_engine'
 require 'colonel/server/helpers/roots_helper'
-require 'colonel/server/helpers/templates_helper'
 require 'colonel/server/helpers/views_helper'
 
 class Colonel::Server < Sinatra::Base
@@ -23,7 +22,7 @@ class Colonel::Server < Sinatra::Base
   set :views,  "#{dir}/server/views"
   set :public_folder, "#{dir}/server/public"
 
-  helpers RootsHelper, TemplatesHelper, ViewsHelper
+  helpers RootsHelper, ViewsHelper
 
   before /^(?!\/index)/ do
     @colonel = Colonel::Builder.new(:all_flag => false)
