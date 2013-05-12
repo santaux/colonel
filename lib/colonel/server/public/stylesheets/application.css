@@ -17,6 +17,26 @@ a.select_all, a.clear_all {
     font-size: 15px;
 }
 
+/* Job editing/creating form */
+
 input#command {
   margin-bottom: 0px;
+}
+
+/* Jobs list */
+div.command_container {
+  overflow: scroll;
+  width: 350px;
+}
+
+div.command {
+  width: 750px;
+}
+
+th.action {
+  width: 100px;
+}
+
+th.cmd {
+  width: 350px;
 }

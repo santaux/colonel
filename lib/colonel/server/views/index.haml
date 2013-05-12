@@ -4,13 +4,13 @@
   %thead
     %tr
       %th №
-      %th Minutes
-      %th Hours
-      %th Days
-      %th Months
-      %th Weekdays
-      %th Command
-      %th Action
+      %th Ms
+      %th Hs
+      %th Ds
+      %th Mths
+      %th Wds
+      %th.cmd Command
+      %th.action Action
   %tbody
     - @jobs.each do |job|
       %tr
@@ -20,7 +20,9 @@
         %td= job.schedule.days_string
         %td= job.schedule.months_string
         %td= job.schedule.weekdays_string
-        %td= job.command.get.slice(0,47) + "..."
+        %td
+          .command_container
+            .command= job.command.get
         %td
           = link_to "Edit", edit_path(job.id)
           |

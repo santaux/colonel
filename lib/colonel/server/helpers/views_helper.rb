@@ -25,4 +25,8 @@ module ViewsHelper
       end
     end
   end
+
+  def selected?(period, i)
+    @job && @job.schedule.send(period).include?(i.to_s) && "selected"
+  end
 end
